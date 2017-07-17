@@ -1,0 +1,53 @@
+$grid_numberOfColumns: 6;
+$grid_singleColumnWidth: 100% / $grid_numberOfColumns;
+$grid_containerWidth: 1200px;
+
+@mixin desktop{
+  @media (min-width: 640px){
+    @content;
+  }
+}
+
+@mixin mobile{
+  @media (max-width: 640px){
+    @content;
+  }
+}
+
+.container{
+    width: 100%;
+    max-width: $grid_containerWidth;
+    margin: 0 auto;
+
+    .row{
+      &::before,
+      &::after{
+          content: "";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden;
+      }
+
+      [class*='col-']{
+          float: left;
+          width:100%;
+      }
+
+      @include mobile {
+        @for $i from 1 through $grid_numberOfColumns{
+            .col-m-#{$i}{
+                width: $grid_singleColumnWidth * $i;
+          }
+        }
+      };
+
+      @include desktop {
+        @for $i from 1 through $grid_numberOfColumns{
+            .col-d-#{$i}{
+                width: $grid_singleColumnWidth * $i;
+          }
+        }
+      };
+    }
+}
