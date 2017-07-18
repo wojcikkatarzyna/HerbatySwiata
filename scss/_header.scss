@@ -1,20 +1,28 @@
 header{
-    background: $baseColor1;
+    background: url('https://images.contentful.com/0h9pmgoz6uwq/35XEOUDacMcG4WuicMUE68/e6c877e49de28c5d853d1f260195c466/green-tea.jpg');
+    background-size: cover;
     color: $baseColor2;
     font-weight: bold;
     min-height: 75px;
     line-height: 75px;
     font-size: 35px;
+    text-align: center;
+    @include desktop{
+        background-position: bottom;
+    };
     .logo{
         padding-left: 25px;
+        text-align: left;
+        color: $baseColor1;
         @include desktop{
             text-align: center;
+            color: $baseColor2;
         };
     }
     .mobileMenu{
         font-size: 35px;
         line-height: 75px;
-        text-align: center;
+        color: $baseColor1;
         @include desktop{
             display: none;
         };
@@ -22,14 +30,13 @@ header{
     nav{
         display: none;
         @include desktop{
-            display: block;
+            display: block !important;
         };
         ul{
             li{
                 min-height: 50px;
                 line-height: 50px;
                 font-size: 25px;
-                text-align: center;
                 border-top: 5px solid rgba(255,255,255, 0.25);
 
                 @include desktop{
@@ -38,7 +45,10 @@ header{
                 };
             }
         }
-
+    }
+    .info{
+        min-height: 100px;
+        line-height: 100px;
     }
 }
 .showMenu{

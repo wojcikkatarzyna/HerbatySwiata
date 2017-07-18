@@ -11,7 +11,7 @@ module.exports = {
         filename: '[name]'
     },
     watch: true,
-    devtool: 'eval-source-map',
+    devtool: 'eval',
 
     module: {
         loaders:[
@@ -32,6 +32,13 @@ module.exports = {
                     fallback: 'style-loader',
                     use: ['css-loader', 'sass-loader']
                 })
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                use: [
+                  'url-loader?limit=10000',
+                  'img-loader'
+                ]
             }
         ]
     },

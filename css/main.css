@@ -232,21 +232,29 @@ input[type=button] {
       width: 100%; } }
 
 header {
-  background: #012b03;
+  background: url("https://images.contentful.com/0h9pmgoz6uwq/35XEOUDacMcG4WuicMUE68/e6c877e49de28c5d853d1f260195c466/green-tea.jpg");
+  background-size: cover;
   color: white;
   font-weight: bold;
   min-height: 75px;
   line-height: 75px;
-  font-size: 35px; }
+  font-size: 35px;
+  text-align: center; }
+  @media (min-width: 640px) {
+    header {
+      background-position: bottom; } }
   header .logo {
-    padding-left: 25px; }
+    padding-left: 25px;
+    text-align: left;
+    color: #012b03; }
     @media (min-width: 640px) {
       header .logo {
-        text-align: center; } }
+        text-align: center;
+        color: white; } }
   header .mobileMenu {
     font-size: 35px;
     line-height: 75px;
-    text-align: center; }
+    color: #012b03; }
     @media (min-width: 640px) {
       header .mobileMenu {
         display: none; } }
@@ -254,17 +262,19 @@ header {
     display: none; }
     @media (min-width: 640px) {
       header nav {
-        display: block; } }
+        display: block !important; } }
     header nav ul li {
       min-height: 50px;
       line-height: 50px;
       font-size: 25px;
-      text-align: center;
       border-top: 5px solid rgba(255, 255, 255, 0.25); }
       @media (min-width: 640px) {
         header nav ul li {
           display: inline-block;
           width: 33.333%; } }
+  header .info {
+    min-height: 100px;
+    line-height: 100px; }
 
 .showMenu {
   display: block; }
