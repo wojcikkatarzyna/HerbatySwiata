@@ -38,7 +38,6 @@ header{
                 line-height: 50px;
                 font-size: 25px;
                 border-top: 5px solid rgba(255,255,255, 0.25);
-
                 @include desktop{
                     display: inline-block;
                     width: 33.333%;
@@ -46,11 +45,23 @@ header{
             }
         }
     }
-    .info{
-        min-height: 100px;
-        line-height: 100px;
+    #gallery{
+        height: 150px;
+        .arrow{
+            font-size: 20px;
+            text-align: center;
+            line-height: 150px;
+        }
+        .info{
+            font-size: 35px;
+        }
     }
 }
+
 .showMenu{
     display: block;
+}
+
+.hideInfo{
+    display: none;
 }

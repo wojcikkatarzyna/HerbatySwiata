@@ -272,12 +272,20 @@ header {
         header nav ul li {
           display: inline-block;
           width: 33.333%; } }
-  header .info {
-    min-height: 100px;
-    line-height: 100px; }
+  header #gallery {
+    height: 150px; }
+    header #gallery .arrow {
+      font-size: 20px;
+      text-align: center;
+      line-height: 150px; }
+    header #gallery .info {
+      font-size: 35px; }
 
 .showMenu {
   display: block; }
+
+.hideInfo {
+  display: none; }
 
 * {
   font-family: 'Niconne', cursive; }
