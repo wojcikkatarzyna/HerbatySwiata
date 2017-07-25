@@ -1,0 +1,16 @@
+#about, #products, #contact{
+    background: $baseColor1;
+    color: $baseColor2;
+    border-bottom: 5px solid rgba(255,255,255, 0.5);
+    article{
+        div{
+            padding: 10px;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            h1{
+                font-size: 35px;
+            }
+        }
+    }
+}

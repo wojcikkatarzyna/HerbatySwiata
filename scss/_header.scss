@@ -1,28 +1,32 @@
 header{
     background: url('https://images.contentful.com/0h9pmgoz6uwq/35XEOUDacMcG4WuicMUE68/e6c877e49de28c5d853d1f260195c466/green-tea.jpg');
     background-size: cover;
-    color: $baseColor2;
+    background-position: bottom;
+    color: $baseColor1;
     font-weight: bold;
-    min-height: 75px;
-    line-height: 75px;
-    font-size: 35px;
+    min-height: 50px;
+    line-height: 50px;
     text-align: center;
+    // position: fixed;
+    // z-index: 10;
     @include desktop{
         background-position: bottom;
+        min-height: 75px;
+        line-height: 75px;
     };
     .logo{
         padding-left: 25px;
         text-align: left;
-        color: $baseColor1;
+        background: rgba(255,255,255, 0.5);
+        font-size: 25px;
         @include desktop{
             text-align: center;
-            color: $baseColor2;
+            font-size: 50px;
         };
     }
     .mobileMenu{
-        font-size: 35px;
-        line-height: 75px;
-        color: $baseColor1;
+        line-height: 50px;
+        background: rgba(255,255,255, 0.5);
         @include desktop{
             display: none;
         };
@@ -33,35 +37,40 @@ header{
             display: block !important;
         };
         ul{
+            background: rgba(255,255,255, 0.25);
+            @include desktop{
+                background: white;
+            }
             li{
                 min-height: 50px;
                 line-height: 50px;
-                font-size: 25px;
-                border-top: 5px solid rgba(255,255,255, 0.25);
+                border-top: 5px solid rgba(255,255,255, 0.5);
+                font-size: 20px;
+                &:hover{
+                    background: $baseColor1;
+                }
+                &:hover > a{
+                    color: white;
+                }
                 @include desktop{
+                    font-size: 25px;
                     display: inline-block;
                     width: 33.333%;
-                };
+                    border-bottom: 5px solid rgba(255,255,255, 0.5);
+                    &:nth-of-type(2){
+                        border-left: 3px solid $baseColor1;
+                        border-right: 3px solid $baseColor1;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    color: $baseColor1;
+                }
             }
-        }
-    }
-    #gallery{
-        height: 150px;
-        .arrow{
-            font-size: 20px;
-            text-align: center;
-            line-height: 150px;
-        }
-        .info{
-            font-size: 35px;
         }
     }
 }
 
 .showMenu{
     display: block;
-}
-
-.hideInfo{
-    display: none;
 }

@@ -234,27 +234,29 @@ input[type=button] {
 header {
   background: url("https://images.contentful.com/0h9pmgoz6uwq/35XEOUDacMcG4WuicMUE68/e6c877e49de28c5d853d1f260195c466/green-tea.jpg");
   background-size: cover;
-  color: white;
+  background-position: bottom;
+  color: #012b03;
   font-weight: bold;
-  min-height: 75px;
-  line-height: 75px;
-  font-size: 35px;
+  min-height: 50px;
+  line-height: 50px;
   text-align: center; }
   @media (min-width: 640px) {
     header {
-      background-position: bottom; } }
+      background-position: bottom;
+      min-height: 75px;
+      line-height: 75px; } }
   header .logo {
     padding-left: 25px;
     text-align: left;
-    color: #012b03; }
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 25px; }
     @media (min-width: 640px) {
       header .logo {
         text-align: center;
-        color: white; } }
+        font-size: 50px; } }
   header .mobileMenu {
-    font-size: 35px;
-    line-height: 75px;
-    color: #012b03; }
+    line-height: 50px;
+    background: rgba(255, 255, 255, 0.5); }
     @media (min-width: 640px) {
       header .mobileMenu {
         display: none; } }
@@ -263,29 +265,107 @@ header {
     @media (min-width: 640px) {
       header nav {
         display: block !important; } }
-    header nav ul li {
-      min-height: 50px;
-      line-height: 50px;
-      font-size: 25px;
-      border-top: 5px solid rgba(255, 255, 255, 0.25); }
+    header nav ul {
+      background: rgba(255, 255, 255, 0.25); }
       @media (min-width: 640px) {
-        header nav ul li {
-          display: inline-block;
-          width: 33.333%; } }
-  header #gallery {
-    height: 150px; }
-    header #gallery .arrow {
-      font-size: 20px;
-      text-align: center;
-      line-height: 150px; }
-    header #gallery .info {
-      font-size: 35px; }
+        header nav ul {
+          background: white; } }
+      header nav ul li {
+        min-height: 50px;
+        line-height: 50px;
+        border-top: 5px solid rgba(255, 255, 255, 0.5);
+        font-size: 20px; }
+        header nav ul li:hover {
+          background: #012b03; }
+        header nav ul li:hover > a {
+          color: white; }
+        @media (min-width: 640px) {
+          header nav ul li {
+            font-size: 25px;
+            display: inline-block;
+            width: 33.333%;
+            border-bottom: 5px solid rgba(255, 255, 255, 0.5); }
+            header nav ul li:nth-of-type(2) {
+              border-left: 3px solid #012b03;
+              border-right: 3px solid #012b03; } }
+        header nav ul li a {
+          text-decoration: none;
+          color: #012b03; }
 
 .showMenu {
   display: block; }
 
+#gallery .slide {
+  height: 200px;
+  width: 100%;
+  position: relative; }
+  @media (min-width: 640px) {
+    #gallery .slide {
+      height: 450px;
+      line-height: 150px; } }
+  #gallery .slide img {
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+  #gallery .slide span {
+    border: 2px solid black;
+    box-shadow: 0 3px 10px 0 #012b03;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: 5;
+    width: 50%;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    text-align: center; }
+    @media (min-width: 640px) {
+      #gallery .slide span {
+        height: 150px;
+        vertical-align: middle;
+        font-size: 35px; } }
+
 .hideInfo {
   display: none; }
 
+#about, #products, #contact {
+  background: #012b03;
+  color: white;
+  border-bottom: 5px solid rgba(255, 255, 255, 0.5); }
+  #about article div, #products article div, #contact article div {
+    padding: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center; }
+    #about article div h1, #products article div h1, #contact article div h1 {
+      font-size: 35px; }
+
+#contact {
+  width: 100%;
+  height: 400px; }
+  #contact h1 {
+    margin: 25px 0;
+    text-align: center; }
+  #contact form {
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+    #contact form label {
+      margin-top: 15px; }
+    #contact form input {
+      display: block;
+      margin: 0 auto;
+      width: 90%; }
+      #contact form input:last-of-type {
+        width: 60%; }
+    #contact form textarea {
+      width: 90%; }
+  #contact iframe {
+    width: 90%;
+    height: 350px;
+    margin-top: 25px;
+    margin-left: 5%;
+    border: 2px solid black;
+    box-shadow: 0 3px 10px 0 #012b03; }
+
 * {
-  font-family: 'Niconne', cursive; }
+  font-family: 'Dancing Script', sans-serif; }

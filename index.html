@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css" >
-    <link href="https://fonts.googleapis.com/css?family=Niconne" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href="css/main.css" rel="stylesheet">
     <title> Herbaty Świata </title>
 </head>
@@ -14,7 +14,7 @@
     <header class="container">
         <div class="row">
             <div class="logo col-m-5 col-d-6">
-                Herbaty Swiata
+                Herbaty Świata
             </div>
             <div class="mobileMenu col-m-1 fa fa-bars">
             </div>
@@ -23,35 +23,89 @@
             <nav class="col-m-6 col-d-6">
                 <ul>
                     <li>
-                        O nas
+                        <a href="#about"> O nas </a>
                     </li><!--
                  --><li>
-                        Asortyment
+                        <a href="#products"> Asortyment </a>
                     </li><!--
                   --><li>
-                        Kontakt
+                        <a href="#contact"> Kontakt </a>
                     </li>
                 </ul>
             </nav>
         </div>
-        <div id="gallery" class="row">
-            <div class="arrow col-m-1 col-d-1 fa fa-chevron-left" aria-hidden="true">
-            </div>
-            <div class="col-m-4 col-d-4">
-                <span class="info"> Ponad 100 róznych herbat! </span>
-                <span class="info hideInfo"> Unikalna ceramika </span>
-                <span class="info hideInfo"> Akcesoria do parzenia herbaty </span>
-                <span class="info hideInfo"> Idealny pomysl na prezent! </span>
-            </div>
-            <div class="arrow col-m-1 col-d-1 fa fa-chevron-right">
-            </div>
-        </div>
     </header>
 
-    <section class="container">
+    <section id="gallery" class="container">
         <div class="row">
+            <div class="col-m-6 col-d-6">
+                <div class="slide">
+                    <img src="images/herbata.jpg"/>
+                    <span class="info"> Ponad 100 gatunków! </span>
+                </div>
+                <div class="slide hideInfo">
+                    <img src="images/cup.jpg"/>
+                    <span class="info"> Unikalna ceramika </span>
+                </div>
+                <div class="slide hideInfo">
+                    <img src="images/imbryk.jpg"/>
+                    <span class="info"> Akcesoria do parzenia </span>
+                </div>
+                <div class="slide hideInfo">
+                    <img src="images/prezent.jpg"/>
+                    <span class="info"> Idealne na prezent! </span>
+                </div>
+                <div class="slide hideInfo">
+                    <img src="images/sugar.jpg"/>
+                    <span class="info"> Dodatki </span>
+                </div>
 
+            </div>
         </div>
+    </section>
+
+    <section id="about" class="container">
+        <article class="row">
+            <div class="col-m-6 col-d-3">
+                 <h1>Sklep tworzony z pasją!</h1><br />
+                 Herbaty Świata to ponad 100 gatunków herbat, unikalna ceramika, oryginalne akcesoria do herbaty ale przede wszystkim cudowna atmosfera!
+            </div>
+            <div class="col-m-6 col-d-3">
+                <img src="images/shop.jpg" />
+            </div>
+        </article>
+    </section>
+
+    <section id="products" class="container">
+        <article class="row">
+            <div class="col-m-6 col-d-3">
+                <img src="images/products.jpg" />
+            </div>
+            <div class="col-m-6 col-d-3">
+                 <h1>Ogromny wybór!</h1><br />
+                 Zielona? Czarna? Czerwona? Biala? Z owocami? Mamy je wszystkie!
+            </div>
+        </article>
+    </section>
+
+    <section id="contact" class="container">
+        <article class="row">
+            <div class="col-m-6 col-d-3">
+                <h1> Skontaktuj się z nami! </h1>
+                <form>
+                    <label for="user">Imię i nazwisko: </label>
+                    <input type="text" name="user" placeholder="imię i nazwisko"/>
+                    <label for="mail">E-mail: </label>
+                    <input type="email" name="mail" placeholder="adres e-mail"/>
+                    <label>Twoja wiadomośc: </label>
+                    <textarea placeholder="twoja wiadomość"></textarea>
+                    <input type="submit" value="Wyślij wiadomość"/>
+                </form>
+            </div>
+            <div class="col-m-6 col-d-3">
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA5O1qwrCZYyEDKqY3VCRS0UKkh02S29Ks&q=herbaty+%C5%9Bwiata+tarnowskie+g%C3%B3ry"></iframe>
+            </div>
+        </article>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
