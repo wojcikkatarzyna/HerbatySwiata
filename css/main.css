@@ -239,7 +239,11 @@ header {
   font-weight: bold;
   min-height: 50px;
   line-height: 50px;
-  text-align: center; }
+  text-align: center;
+  font-weight: 700;
+  position: fixed;
+  top: 0;
+  z-index: 1; }
   @media (min-width: 640px) {
     header {
       background-position: bottom;
@@ -295,34 +299,38 @@ header {
 .showMenu {
   display: block; }
 
-#gallery .slide {
-  height: 200px;
-  width: 100%;
-  position: relative; }
+#gallery {
+  position: absolute;
+  top: 50px; }
   @media (min-width: 640px) {
-    #gallery .slide {
-      height: 450px;
-      line-height: 150px; } }
-  #gallery .slide img {
+    #gallery {
+      top: 150px; } }
+  #gallery .slide {
+    height: 200px;
     width: 100%;
-    height: 100%;
-    z-index: 1; }
-  #gallery .slide span {
-    border: 2px solid black;
-    box-shadow: 0 3px 10px 0 #012b03;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.75);
-    z-index: 5;
-    width: 50%;
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    text-align: center; }
+    position: relative; }
     @media (min-width: 640px) {
-      #gallery .slide span {
-        height: 150px;
-        vertical-align: middle;
-        font-size: 35px; } }
+      #gallery .slide {
+        height: 450px;
+        line-height: 150px; } }
+    #gallery .slide img {
+      width: 100%;
+      height: 100%; }
+    #gallery .slide span {
+      border: 2px solid black;
+      box-shadow: 0 3px 10px 0 #012b03;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.75);
+      width: 50%;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      text-align: center; }
+      @media (min-width: 640px) {
+        #gallery .slide span {
+          height: 150px;
+          vertical-align: middle;
+          font-size: 35px; } }
 
 .hideInfo {
   display: none; }
@@ -331,17 +339,49 @@ header {
   background: #012b03;
   color: white;
   border-bottom: 5px solid rgba(255, 255, 255, 0.5); }
-  #about article div, #products article div, #contact article div {
-    padding: 10px;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center; }
-    #about article div h1, #products article div h1, #contact article div h1 {
-      font-size: 35px; }
+  #about article, #products article, #contact article {
+    padding: 18px 0; }
+    #about article div, #products article div, #contact article div {
+      padding: 10px;
+      font-size: 15px;
+      line-height: 30px;
+      text-align: center; }
+      #about article div h1, #products article div h1, #contact article div h1 {
+        font-size: 25px; }
+
+#about {
+  position: absolute;
+  top: 250px;
+  height: 400px; }
+  @media (min-width: 640px) {
+    #about {
+      top: 600px;
+      height: 300px; } }
+
+#products {
+  height: 400px;
+  position: absolute;
+  top: 650px; }
+  @media (min-width: 640px) {
+    #products {
+      top: 900px;
+      height: 300px; } }
+
+#contact {
+  position: absolute;
+  top: 1050px;
+  height: 750px; }
+  @media (min-width: 640px) {
+    #contact {
+      top: 1200px;
+      height: 400px; } }
 
 #contact {
   width: 100%;
-  height: 400px; }
+  min-height: 600px; }
+  @media (min-width: 640px) {
+    #contact {
+      min-height: 400px; } }
   #contact h1 {
     margin: 25px 0;
     text-align: center; }
@@ -362,10 +402,49 @@ header {
   #contact iframe {
     width: 90%;
     height: 350px;
-    margin-top: 25px;
     margin-left: 5%;
-    border: 2px solid black;
+    border: 3px solid black;
     box-shadow: 0 3px 10px 0 #012b03; }
 
+footer {
+  padding: 15px;
+  position: absolute;
+  top: 1800px; }
+  @media (min-width: 640px) {
+    footer {
+      top: 1600px; } }
+  footer h2 {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center; }
+    @media (min-width: 640px) {
+      footer h2 {
+        line-height: 70px; } }
+  footer h3 {
+    font-size: 15px; }
+  footer a {
+    color: #012b03;
+    text-decoration: none;
+    text-align: center; }
+  footer .fa {
+    font-size: 35px;
+    align-self: center; }
+  footer .smedia {
+    border-top: 3px solid #012b03;
+    margin-top: 25px; }
+    @media (min-width: 640px) {
+      footer .smedia {
+        border-top: transparent;
+        border-left: 3px solid #012b03;
+        margin-top: 0; } }
+    footer .smedia .links {
+      display: flex;
+      justify-content: space-around; }
+  footer .author {
+    text-align: center;
+    background: #012b03;
+    color: white;
+    margin-top: 15px; }
+
 * {
-  font-family: 'Dancing Script', sans-serif; }
+  font-family: 'Dancing Script', cursive, sans-serif; }

@@ -1,0 +1,47 @@
+footer{
+    padding: 15px;
+    position: absolute;
+    top: 1800px;
+    @include desktop{
+        top: 1600px;
+    }
+    h2{
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        @include desktop{
+            line-height: 70px;
+        }
+    }
+    h3{
+        font-size: 15px;
+    }
+    a{
+        color: $baseColor1;
+        text-decoration: none;
+        text-align: center;
+    }
+    .fa{
+        font-size: 35px;
+        align-self: center;
+    }
+    .smedia{
+        border-top: 3px solid $baseColor1;
+        margin-top: 25px;
+        @include desktop{
+            border-top: transparent;
+            border-left: 3px solid $baseColor1;
+            margin-top: 0;
+        }
+        .links{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    .author{
+        text-align: center;
+        background: $baseColor1;
+        color: $baseColor2;
+        margin-top: 15px;
+    }
+}

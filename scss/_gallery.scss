@@ -1,4 +1,9 @@
 #gallery{
+    position: absolute;
+    top: 50px;
+    @include desktop{
+        top: 150px;
+    }
     .slide{
         height: 200px;
         width: 100%;
@@ -10,14 +15,12 @@
         img{
             width: 100%;
             height: 100%;
-            z-index: 1;
         }
         span{
             border: 2px solid black;
             box-shadow: 0 3px 10px 0 $baseColor1;
             padding: 10px;
             background: rgba(255,255,255, 0.75);
-            z-index: 5;
             width: 50%;
             position: absolute;
             top: 25px;
