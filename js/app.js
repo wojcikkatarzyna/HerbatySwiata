@@ -18,21 +18,21 @@ $(document).ready(function(){
         }, 500);
     });
 
-    // slider
-    const slides = $('.slide');
-    let slide = 0;
+    // slider (animation instead)
+    // const slides = $('.slide');
+    // let slide = 0;
+    //
+    // function nextSlide() {
+    //   slides.eq(slide).addClass('hideInfo');
+    //   slide--;
+    //   if (slide < 0) {
+    //     slide = slides.length -1;
+    //   };
+    //   slides.eq(slide).removeClass('hideInfo');
+    // }
 
-    function nextSlide() {
-      slides.eq(slide).addClass('hideInfo');
-      slide--;
-      if (slide < 0) {
-        slide = slides.length -1;
-      };
-      slides.eq(slide).removeClass('hideInfo');
-    }
-
-    const intervalId = setInterval(function(){
-      nextSlide();
-    }, 3000);
+    // const intervalId = setInterval(function(){
+    //   nextSlide();
+    // }, 3000);
 
 })
