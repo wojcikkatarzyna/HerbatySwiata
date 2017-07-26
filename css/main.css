@@ -193,7 +193,9 @@ input[type=button] {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1025px;
+  left: 0;
+  right: 0;
   margin: 0 auto; }
   .container .row::before, .container .row::after {
     content: "";
@@ -300,11 +302,10 @@ header {
   display: block; }
 
 #gallery {
-  position: absolute;
-  top: 50px; }
+  margin-top: 50px; }
   @media (min-width: 640px) {
     #gallery {
-      top: 150px; } }
+      margin-top: 150px; } }
   #gallery .slide {
     height: 200px;
     width: 100%;
@@ -346,42 +347,30 @@ header {
       font-size: 15px;
       line-height: 30px;
       text-align: center; }
+      @media (min-width: 640px) {
+        #about article div, #products article div, #contact article div {
+          font-size: 25px; } }
       #about article div h1, #products article div h1, #contact article div h1 {
         font-size: 25px; }
+        @media (min-width: 640px) {
+          #about article div h1, #products article div h1, #contact article div h1 {
+            font-size: 35px; } }
 
 #about {
-  position: absolute;
-  top: 250px;
-  height: 400px; }
-  @media (min-width: 640px) {
-    #about {
-      top: 600px;
-      height: 300px; } }
+  min-height: 400px; }
 
 #products {
-  height: 400px;
-  position: absolute;
-  top: 650px; }
-  @media (min-width: 640px) {
-    #products {
-      top: 900px;
-      height: 300px; } }
+  min-height: 400px; }
 
 #contact {
-  position: absolute;
-  top: 1050px;
   height: 750px; }
   @media (min-width: 640px) {
     #contact {
-      top: 1200px;
-      height: 400px; } }
+      height: 600px; } }
 
 #contact {
   width: 100%;
   min-height: 600px; }
-  @media (min-width: 640px) {
-    #contact {
-      min-height: 400px; } }
   #contact h1 {
     margin: 25px 0;
     text-align: center; }
@@ -405,14 +394,12 @@ header {
     margin-left: 5%;
     border: 3px solid black;
     box-shadow: 0 3px 10px 0 #012b03; }
+    @media (min-width: 640px) {
+      #contact iframe {
+        height: 550px; } }
 
 footer {
-  padding: 15px;
-  position: absolute;
-  top: 1800px; }
-  @media (min-width: 640px) {
-    footer {
-      top: 1600px; } }
+  padding: 15px; }
   footer h2 {
     font-size: 20px;
     line-height: 30px;
@@ -422,6 +409,9 @@ footer {
         line-height: 70px; } }
   footer h3 {
     font-size: 15px; }
+    @media (min-width: 640px) {
+      footer h3 {
+        font-size: 20px; } }
   footer a {
     color: #012b03;
     text-decoration: none;
@@ -444,7 +434,13 @@ footer {
     text-align: center;
     background: #012b03;
     color: white;
-    margin-top: 15px; }
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 25px; }
+    @media (min-width: 640px) {
+      footer .author {
+        font-size: 20px;
+        line-height: 40px; } }
 
 * {
   font-family: 'Dancing Script', cursive, sans-serif; }

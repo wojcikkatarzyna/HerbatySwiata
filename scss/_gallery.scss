@@ -1,8 +1,7 @@
 #gallery{
-    position: absolute;
-    top: 50px;
+    margin-top: 50px;
     @include desktop{
-        top: 150px;
+        margin-top: 150px;
     }
     .slide{
         height: 200px;

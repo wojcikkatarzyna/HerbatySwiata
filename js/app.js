@@ -8,6 +8,16 @@ $(document).ready(function(){
         nav.slideToggle();
     })
 
+    // navigation with header distance
+    const links = $('a');
+    links.on('click',function(event){
+      event.preventDefault();
+      console.log(this);
+      $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top-200
+        }, 500);
+    });
+
     // slider
     const slides = $('.slide');
     let slide = 0;
